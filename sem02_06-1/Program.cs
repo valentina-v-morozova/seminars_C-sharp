@@ -16,18 +16,19 @@ for (int i = 0; i < numbers.Length; i++)
     numbers[i] = Prompt($"Введите число {i + 1}: ");
 }
 
-int summ = 0;
+int summ = Summ(numbers);
 double average;
 
-for (int i = 0; i < numbers.Length; i++)
+int Summ(int[] numbers)
 {
-    summ += numbers[i];
+    int summ = 0;
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        summ += numbers[i];
+    }
+    return summ;
 }
-
-average = summ / numbers.Length;
-int reminds = summ % numbers.Length;
-System.Console.WriteLine(summ);
-System.Console.Write($"{numbers[0],}{average},{reminds}");
-//int sum = firstNumber + secondNumber + thirdNumber + forthNumber + fifthNumber;
-//double average = sum / 5;
-//System.Console.WriteLine($"{firstNumber}, {secondNumber} {thirdNumber}, {forthNumber} {fifthNumber} -> сумма {sum}, среднее {average}");
+    average = summ / numbers.Length;
+    int reminds = summ % numbers.Length;
+    System.Console.WriteLine(summ);
+    System.Console.Write($"{average},{reminds}");
