@@ -19,6 +19,12 @@ ulong SumNumbers(ulong number)
     return sum;
 }
 
+ulong SumGausNumbers(ulong number)
+{
+    return (number + 1) * number / 2;
+}
+
 ulong num = Prompt("Введите число > ");
 ulong result = SumNumbers(num);
 System.Console.WriteLine($"Сумма чисел равна {result}");
+System.Console.WriteLine($"Сумма чисел по Гауссу равна {SumGausNumbers(num)}");
